@@ -1,0 +1,4 @@
+control=1
+debug=1
+sfx=1
+music=0

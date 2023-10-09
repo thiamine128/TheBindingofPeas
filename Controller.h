@@ -1,0 +1,25 @@
+#pragma once
+
+#include <glm/gtc/type_ptr.hpp>
+
+class Controller
+{
+public:
+    Controller();
+    ~Controller();
+
+    glm::vec3 getVelocity();
+    bool isKeyPressed(int) const;
+    bool isMouseButtonPressed(int) const;
+    void onPress(int) const;
+    void processInput();
+    void onMouseButtonPress(int, double, double) const;
+    void onScroll(double, double) const;
+    void onCursorMove(double, double);
+    double getMouseX() const;
+    double getMouseY() const;
+    bool useMouseControl() const;
+protected:
+    double mouseX, mouseY;
+    bool mouseControl;
+};
